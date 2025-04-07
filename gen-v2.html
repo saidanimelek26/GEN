@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gen V2 - [Your Name]</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Orbitron', sans-serif;
+            background: #0a0a0a;
+            color: #fff;
+            overflow-x: hidden;
+            position: relative;
+        }
+        /* Animated Background */
+        .background {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(45deg, #0a0a0a, #1e1e1e);
+            z-index: -1;
+            overflow: hidden;
+        }
+        .background::before {
+            content: '';
+            position: absolute;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 212, 255, 0.1), transparent);
+            animation: rotateGlow 20s linear infinite;
+        }
+        /* Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            background: rgba(10, 10, 10, 0.8);
+            padding: 20px 40px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            z-index: 1000;
+            backdrop-filter: blur(10px);
+        }
+        .navbar a {
+            color: #00d4ff;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin-left: 40px;
+            transition: all 0.3s;
+            text-shadow: 0 0 5px rgba(0, 212, 255, 0.5);
+        }
+        .navbar a:hover {
+            color: #fff;
+            text-shadow: 0 0 15px #00d4ff;
+        }
+        /* Main Content */
+        .main {
+            padding: 150px 20px 100px;
+            max-width: 1200px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        .main h1 {
+            font-size: 4em;
+            color: #00d4ff;
+            text-shadow: 0 0 20px #00d4ff;
+            margin-bottom: 30px;
+            animation: fadeIn 2s ease;
+        }
+        .project-image {
+            margin: 0 auto 40px;
+            max-width: 800px;
+            perspective: 1000px;
+        }
+        .project-image img {
+            width: 100%;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 212, 255, 0.5);
+            transform-style: preserve-3d;
+            transition: transform 0.5s;
+        }
+        .project-image img:hover {
+            transform: rotateY(10deg) translateZ(20px);
+        }
+        .description {
+            background: rgba(52, 73, 94, 0.9);
+            padding: 40px;
+            border-radius: 15px;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.5);
+            margin-bottom: 40px;
+        }
+        .description h2 {
+            font-size: 2.5em;
+            color: #00d4ff;
+            margin-bottom: 20px;
+        }
+        .description p {
+            font-size: 1.2em;
+            color: #ddd;
+            line-height: 1.8;
+        }
+        .download-btn {
+            display: inline-block;
+            padding: 15px 40px;
+            background: #00d4ff;
+            color: #fff;
+            text-decoration: none;
+            font-size: 1.3em;
+            border-radius: 50px;
+            box-shadow: 0 0 20px rgba(0, 212, 255, 0.5);
+            transition: all 0.3s;
+        }
+        .download-btn:hover {
+            background: #fff;
+            color: #00d4ff;
+            box-shadow: 0 0 40px rgba(0, 212, 255, 1);
+            transform: translateY(-5px);
+        }
+        /* Footer */
+        .footer {
+            padding: 40px 20px;
+            text-align: center;
+            background: #1e1e1e;
+            border-top: 1px solid rgba(0, 212, 255, 0.2);
+        }
+        .footer a {
+            color: #00d4ff;
+            margin: 0 20px;
+            font-size: 2em;
+            transition: all 0.3s;
+        }
+        .footer a:hover {
+            color: #fff;
+            text-shadow: 0 0 20px #00d4ff;
+        }
+        /* Animations */
+        @keyframes rotateGlow {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            100% { transform: translate(-50%, -50%) rotate(360deg); }
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        @media (max-width: 768px) {
+            .main h1 { font-size: 2.5em; }
+            .navbar { flex-direction: column; padding: 15px; }
+            .navbar a { margin: 10px 0; }
+            .description { padding: 20px; }
+            .download-btn { padding: 10px 30px; font-size: 1.1em; }
+        }
+    </style>
+</head>
+<body>
+    <div class="background"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="logo">[melek saidani]</div>
+        <div>
+            <a href="index.html">Home</a>
+            <a href="#about">About Gen V2</a>
+            <a href="#download">Download</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <section class="main">
+        <h1>Gen V2</h1>
+        <div class="project-image">
+            <img src="HTTPSUPUP" alt="Gen V2 Screenshot">
+        </div>
+        <div class="description">
+            <h2>About Gen V2</h2>
+            <p>Gen V2 is a revolutionary custom Android ROM designed to push the limits of performance and customization. Built from the ground up with advanced optimizations, it offers a seamless user experience, enhanced battery life, and a futuristic interface. Whether you're a power user or a tech enthusiast, Gen V2 brings your device to the next level.</p>
+        </div>
+        <a href="https://github.com/[yourusername]/gen-v2/releases" class="download-btn" target="_blank">Download Now</a>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <p>Connect with me:</p>
+        <a href="https://github.com/[saidanimelek26]" target="_blank"><i class="fab fa-github"></i></a>
+    </footer>
+</body>
+</html>
